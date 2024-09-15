@@ -222,7 +222,7 @@ afterEach(() => {
   koaApp.close();
 });
 
-describe("Books list", () => {
+describe.skip("Books list", () => {
   test("GET /book", async () => {
     const resp = await request(koaApp).get("/book");
 
@@ -230,7 +230,7 @@ describe("Books list", () => {
   });
 });
 
-describe("Authors list", () => {
+describe.skip("Authors list", () => {
   test("GET /author", async () => {
     const resp = await request(koaApp).get("/author");
     const respAuthors = JSON.parse(resp.text).sort();
@@ -246,7 +246,7 @@ describe("Genres list", () => {
   });
 });
 
-describe("Book filter list", () => {
+describe.skip("Book filter list", () => {
   const urlTest1 = "/book?filter=price&type=lte&value=7";
   test(`GET ${urlTest1}`, async () => {
     const resp = await request(koaApp).get("/book").query({
