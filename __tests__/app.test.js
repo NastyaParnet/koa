@@ -230,7 +230,7 @@ describe.skip("Books list", () => {
   });
 });
 
-describe.skip("Authors list", () => {
+describe("Authors list", () => {
   test("GET /author", async () => {
     const resp = await request(koaApp).get("/author");
     const respAuthors = JSON.parse(resp.text).sort();
